@@ -19,6 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'grotesk': ['"Space Grotesk"', 'sans-serif'],
+				'jetbrains': ['"JetBrains Mono"', 'monospace'],
 				'dm-sans': ['"DM Sans"', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 				'lato': ['Lato', 'sans-serif'],

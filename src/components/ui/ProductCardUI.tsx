@@ -26,7 +26,7 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
   return (
     <HeadlessProductCard product={product}>
       {(logic) => (
-        <Card className="bg-white border border-gray-200">
+        <Card className="glass border border-border rounded-none">
           <CardContent className="p-4">
             <Link to={`/productos/${logic.product.slug}`} className="block">
               <div className="aspect-square bg-gray-100 rounded-md mb-3 overflow-hidden relative group">
@@ -77,11 +77,11 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
                 </div>
               </div>
 
-              <h3 className="text-black font-medium text-sm mb-1 line-clamp-2">
+              <h3 className="text-white font-medium text-sm mb-1 line-clamp-2">
                 {logic.product.title}
               </h3>
               {logic.product.description && (
-                <p className="text-gray-600 text-xs mb-3 line-clamp-2">
+                <p className="text-muted-foreground text-xs mb-3 line-clamp-2">
                   {logic.product.description.replace(/<[^>]*>/g, '')}
                 </p>
               )}
@@ -91,7 +91,7 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
               <div className="mb-3 space-y-2">
                 {logic.options.map((opt) => (
                   <div key={opt.id}>
-                    <div className="text-xs font-medium text-black mb-1">{opt.name}</div>
+                    <div className="text-xs font-medium text-white mb-1">{opt.name}</div>
                     <div className="flex flex-wrap gap-2">
                       {opt.values.filter(val => logic.isOptionValueAvailable(opt.name, val)).map((val) => {
                         const isSelected = logic.selected[opt.name] === val
@@ -144,7 +144,7 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
 
             <div className="flex items-center justify-between">
               <div className="flex flex-col">
-                <span className="text-black font-semibold">
+                <span className="text-white font-semibold">
                   {logic.formatMoney(logic.currentPrice)}
                 </span>
                 {logic.currentCompareAt && logic.currentCompareAt > logic.currentPrice && (
@@ -161,7 +161,7 @@ export const ProductCardUI = ({ product }: ProductCardUIProps) => {
                   logic.handleAddToCart()
                 }}
                 disabled={!logic.canAddToCart}
-                className="text-black border-black hover:bg-black hover:text-white disabled:opacity-50"
+                className="text-white border-accent hover:bg-accent hover:text-black disabled:opacity-50"
               >
                 {logic.inStock ? 'Agregar' : 'Agotado'}
               </Button>
