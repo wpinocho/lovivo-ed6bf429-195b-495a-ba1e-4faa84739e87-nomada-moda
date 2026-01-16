@@ -11,6 +11,7 @@ import { SettingsProvider } from "@/contexts/SettingsContext";
 import { PixelProvider } from "@/contexts/PixelContext";
 import { PostHogProvider } from "@/contexts/PostHogContext";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { CustomCursor } from "@/components/nomada/CustomCursor";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
 import Blog from "./pages/Blog";
@@ -45,6 +46,7 @@ const App = () => (
               <TooltipProvider>
                 <Toaster />
                 <Sonner />
+                <CustomCursor />
                 <BrowserRouter>
                   <CartUIProvider>
                     <PageViewTracker />

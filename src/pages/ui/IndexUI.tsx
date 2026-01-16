@@ -1,5 +1,4 @@
 import type { UseIndexLogicReturn } from '@/components/headless/HeadlessIndex';
-import { CustomCursor } from '@/components/nomada/CustomCursor';
 import { FloatingOrbs } from '@/components/nomada/FloatingOrbs';
 import { HeroSection } from '@/components/nomada/HeroSection';
 import { TickerBar } from '@/components/nomada/TickerBar';
@@ -22,7 +21,6 @@ interface IndexUIProps {
 export const IndexUI = ({ logic }: IndexUIProps) => {
   return (
     <div className="relative min-h-screen bg-background">
-      <CustomCursor />
       <FloatingOrbs />
       
       <HeroSection />
