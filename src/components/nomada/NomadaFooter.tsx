@@ -15,9 +15,9 @@ export const NomadaFooter = () => {
           {/* Brand */}
           <div>
             <img 
-              src="/logo.png" 
+              src="/nomada-logo.png" 
               alt="NÓMADA" 
-              className="h-8 mb-4 brightness-0 invert"
+              className="h-8 mb-4"
               onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 e.currentTarget.parentElement!.innerHTML += '<div class="text-2xl font-bold text-white">NÓMADA</div>';
