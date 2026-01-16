@@ -71,9 +71,9 @@ html {
 
   body {
     @apply bg-background text-foreground font-grotesk antialiased;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 50%, #0a0a0a 100%);
+    background: linear-gradient(135deg, #0a0a0a 0%, #0f0d0b 40%, #0a0a0a 60%, #0d0b0a 100%);
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    animation: gradientShift 20s ease infinite;
     overflow-x: hidden;
   }
 
